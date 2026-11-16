@@ -39,18 +39,7 @@ The paper tests 12 models (AE / VAE, with and without ConCoS, on MNIST, Fashion-
 
 The ConCoS models' inter-class cosine converges to about **−1/(C−1)**: −0.111 for 10 classes and −0.04 for 26. This is the lowest value C directions on a sphere can reach, so the class means end up arranged as a regular simplex.
 
-Full tables are in the paper. Output of `reproduce.py` on Fashion-MNIST (20 epochs, CPU, single seed):
-
-| Model | Intra cos | Inter cos | Gap | Acc γ=0.5 / 1 / 10 | Radial feat. dist ↑ | MI(r, class) ↓ |
-|---|---|---|---|---|---|---|
-| AE + ConCoS | 0.980 | **−0.111** | **1.091** | 0.813 / 0.831 / 0.819 | 2.348 | 0.289 |
-| VAE + ConCoS | 0.970 | **−0.111** | **1.081** | 0.762 / 0.799 / 0.770 | 3.361 | 0.038 |
-| AE | 0.693 | 0.231 | 0.462 | 0.810 / 0.822 / 0.814 | 1.912 | 0.112 |
-| VAE | 0.599 | −0.082 | 0.680 | 0.674 / 0.789 / 0.734 | 2.574 | 0.040 |
-
-H1 reproduces exactly: both ConCoS models reach the 10-class simplex bound (−0.111). The VAE results for H2 and H3 also hold. In this single-seed run, though, the plain AE is almost as scale-invariant as AE + ConCoS, and AE + ConCoS has a *higher* MI(r, class) than its baseline. Multi-seed runs are on the to-do list.
-
-<p align="center"><img src="assets/fashion_radial_invariance.png" width="520"></p>
+Full tables are in the paper.
 
 ## Reproduce
 
