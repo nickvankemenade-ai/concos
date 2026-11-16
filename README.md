@@ -13,7 +13,7 @@ For a batch of latents $z_i$ with labels $y_i$:
 
 $$
 \mathcal{L}_{\text{ConCoS}} = -\frac{1}{B(B-1)} \sum_i \sum_{j \neq i} \sigma(y_i, y_j)\,\frac{z_i \cdot z_j}{\lVert z_i\rVert\,\lVert z_j\rVert},
-\qquad \sigma = \begin{cases}+1 & y_i = y_j \\ -1 & y_i \neq y_j\end{cases}
+\qquad \sigma = \begin{cases}+1 & y_i = y_j, \\ -1 & y_i \neq y_j\end{cases}
 $$
 
 Cosine similarity doesn't change when a vector is multiplied by $\gamma > 0$, so ConCoS has no effect on $\lVert z\rVert$. No temperature, augmentations or projection head are needed. The whole loss is one matrix product ([`concos/loss.py`](concos/loss.py)):
