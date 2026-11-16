@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use ConCoS, please cite the paper."
+title: "Learning Interpretable Generative Manifolds through Contrastive Cosine Similarity"
+authors:
+  - family-names: van Kemenade
+    given-names: Nick
+date-released: 2026-08-22
+license: MIT
+type: software
+preferred-citation:
+  type: article
+  title: "Learning Interpretable Generative Manifolds through Contrastive Cosine Similarity"
+  authors:
+    - family-names: van Kemenade
+      given-names: Nick
+  year: 2026
+  month: 8
